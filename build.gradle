@@ -1,0 +1,39 @@
+//plugins {
+//    id 'java'
+//    id 'org.springframework.boot' version '3.2.0'
+//    id 'io.spring.dependency-management' version '1.1.4'
+//}
+
+//allprojects {
+//}
+
+subprojects {
+//    apply plugins: 'java'
+//    apply plugins: 'org.springframework.boot'
+//    apply plugins: 'io.spring.dependency-management'
+    group = 'com.apps'
+    version = '1.0.0'
+
+//    sourceCompatibility = '17'
+
+    repositories {
+        mavenCentral()
+    }
+
+    // prepareKotlinBuildScriptModel 오류 방지
+    tasks.register("prepareKotlinBuildScriptModel") {}
+
+//    task initSourceFolders {
+//        sourceSets*.java.srcDirs*.each {
+//            if( !it.exists() ) {
+//                it.mkdirs()
+//            }
+//        }
+//
+//        sourceSets*.resources.srcDirs*.each {
+//            if( !it.exists() ) {
+//                it.mkdirs()
+//            }
+//        }
+//    }
+}

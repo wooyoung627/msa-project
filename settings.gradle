@@ -1,0 +1,6 @@
+rootProject.name = 'msa-project'
+
+include 'app-eureka'
+include 'app-user'
+include 'app-order'
+include 'app-product'
