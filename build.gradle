@@ -1,20 +1,20 @@
-//plugins {
-//    id 'java'
+plugins {
+    id 'java'
 //    id 'org.springframework.boot' version '3.2.0'
 //    id 'io.spring.dependency-management' version '1.1.4'
-//}
+}
 
 //allprojects {
 //}
 
 subprojects {
-//    apply plugins: 'java'
-//    apply plugins: 'org.springframework.boot'
-//    apply plugins: 'io.spring.dependency-management'
+    apply plugin: 'java'
+//    apply plugin: 'org.springframework.boot'
+//    apply plugin: 'io.spring.dependency-management'
     group = 'com.apps'
     version = '1.0.0'
 
-//    sourceCompatibility = '17'
+    sourceCompatibility = '17'
 
     repositories {
         mavenCentral()
@@ -22,6 +22,11 @@ subprojects {
 
     // prepareKotlinBuildScriptModel 오류 방지
     tasks.register("prepareKotlinBuildScriptModel") {}
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
 
 //    task initSourceFolders {
 //        sourceSets*.java.srcDirs*.each {
